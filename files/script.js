@@ -3,10 +3,6 @@ const btn = document.querySelector('.btn'); // cherche la classe btn
 
 
 /* To top: bouton qui fait remonter en haut de la page */
-function initTOTOP() {
-  let btn = document.getElementById("btn");
-  btn.onclick = totop;
-}
 function totop() { 
   window.scrollTo({
     top: 0,
@@ -14,6 +10,18 @@ function totop() {
     behavior: "smooth"
   })
 };
+
+
+/* le défilement est fluide quand on clique sur une ancre */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 
 // LES COOKIES C LA VIE
