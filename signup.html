@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Créer un compte</title>
+    <link href="files/style.css" rel="stylesheet" type="text/css" />
+    <link href="files/login.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openpgp/4.10.10/openpgp.min.js"></script>
+  <script type="module" src='files/script.js' async></script>
+    <script type="module"src="files/bdd.js"></script>
+    <script type="text/python" src="files/bdd.py"></script>
+  
+  </head>
+
+<body>
+
+    <div class="container">
+        <h2>Créer un compte</h2>
+
+        <formulaire>
+            <div class="form-item-username">
+                <input type="text" name="firstName" id="firstName" placeholder="Prénom">
+                <input type="text" name="lastName" id="lastName" placeholder="Nom">
+            </div>
+
+            <div class="form-item">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+
+            <div class="form-item">
+                <!-- add a password format display -->
+                <span class="pwd-format" id="pwd-format">
+                    8-15 AlphaNumeric Characters
+                </span>
+                <input type="password" name="password" id="password" placeholder="Définir le mot de passe">
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmation du mot de passe">
+            </div>
+
+            <div class="accept-box">
+                <input type="checkbox" name="accept" id="accept">
+                <p>J'accepte les <a href="#">conditions d'utilisation</a></p>
+            </div>
+
+            <div class="form-btns">
+                <button class="signup" id="signup" type="submit" disabled>Continuer</button>
+                <div class="options">
+                    Vous êtes déjà inscrit ? <a href="#">Connectez vous</a>
+                </div>
+            </div>
+
+        </formulaire>
+        <p>Copyright &copy; yourwebsite.com</p>
+    </div>
+
+  
+
+    
+
+</body>
+<script src="files/login.js"></script>
+</html>

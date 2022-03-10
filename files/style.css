@@ -88,11 +88,12 @@ h3 {
 
 /* Je donne une hauteur et organise le header */
 header {
-  height:75px;
+  height:65px;
   width: 100%;
-  padding-top:10px;
-  background: #333; /* linear-gradient(45deg, #e6e6fa, #bfffff99); */
+  padding-top:0px;
+  background: #333;
   text-align: center;
+  margin-bottom: 50px;
 } 
 
 /* Stylise la ligne de séparation entre les actualités */
@@ -104,8 +105,8 @@ hr.rounded {
 /* J'organise la nav */
 nav {
   width: 100%;
-  height: 13.99vh;
-  margin-top: -35px;
+  height: 14vh;
+  margin-top: -65px;
   justify-content: center;
   align-items: center;
   background-color: #fff;
@@ -159,6 +160,15 @@ select {
   
 }
 
+/* je redimensionne les boutons de mise dans le panier */
+.add_to_basket{
+  width: 100px;
+  height: 100px;
+  margin: auto 100px auto 0;
+  font-size: 15px;
+}
+
+
 /* centre le contenu au milieu de la section */
 .box {
   margin: 0 auto;
@@ -201,19 +211,16 @@ select {
 
 /* place la section concernée dans la partie droite de l'écran */
 .droite {
+  max-width: 915px ;
   flex-direction: column;
   width: 75%;
   margin-right:25px;
   padding-left: 5vh;
 }
 
-/* stylisation des menus déroulants */
-/* .dropdown {
-  
-} */
-
 /* place la section concernée dans la partie gauche de l'écran */
 .gauche {
+  max-width: 915px ;
   flex-direction: column;
   width: 75%;
   padding-left: 5vh;
@@ -263,6 +270,12 @@ select {
   color: #333;
 }
 
+.members{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* stylise le texte du nav */
 .nav-item {
   color: #81657C;
@@ -303,9 +316,13 @@ select {
   border-radius: 8px 8px 0 
 }
 
+nav > ul li:hover .sous{
+  display: block;
+}
+
 /* je range les éléments de la div dans un certain ordre */
 .ordre {
-  display:flex;
+  display: flex;
   flex-basis: 50px;
   flex-flow: column wrap;
   flex-shrink: 4;
@@ -323,9 +340,70 @@ select {
   margin-right:25px;
 }
 
+/* Je stylise la date et origine des actualités */
+.origin{
+  color:#f2f2f2;
+  font-family: Georgia, serif;
+  padding: 25px 25px 0 25px;
+}
+
 .other_grps{
   color:black;
   font-family: Georgia, serif;
+}
+
+/* stylisation du menu déroulant */
+.sous {
+  display: none;
+  box-shadow: 0px px 2px #CCC;
+  background-color: white;
+  position: absolute;
+  z-index: 1000;
+}
+
+.sous li:hover ul{
+  left: auto; /* au survol des li on replace les sous-menus */
+  background-color: white;
+  z-index: 1000;
+}
+
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+
+.sous a:hover {
+  background-color: white;
+  position:fixed; 
+  border-bottom: none;
+  color: #F99F72;
+  
+}
+
+.sous li {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+
+/* Stylisation du bouton pour accès au compte de l'utilisateur */
+.user {
+  height: 50px;
+  width: 50px;
+  background: #CD6889;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; /* centre l'icone dans le bouton */
+  align-items: baseline;
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+  cursor: pointer;
+}
+
+#article{
+  margin-top: -125px;
 }
 
 /* met un espace entre les infos des billets-concerts et la section */
@@ -339,9 +417,12 @@ select {
   background: #CD688999;
   padding-top: 5px;
   padding-bottom:5px;
-  margin-left:90.5%;
-  margin-top:25px;
-  position: fixed;
+  margin-left: 1725px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px; /* quand on descend => menu reste à 20px du haut de la page */
+  left: 20px;
+  right: 20px;
 }
 
 #menu ul li {
@@ -359,55 +440,8 @@ overflow: hidden;
   margin-left: 29%;
 }
 
-/* je met une taille différente à chaques image (donc chaque identifiants */
-#NL_June, #NL_March{
-  width: 238px;
-  height: 240px;
-}
-
 /* place les divs droite et gauche côté à côte */
 #ordre{
   display: flex;
   gap: 20px;
-}
-
-/* redimension des images */
-#RoS_rockstadt{
-  width: 171px;
-  height: 249px;
-}
-
-#RoS_Russia{
-  width: 238px;
-  height: 241px;
-}
-
-/* stylisation du menu déroulant */
-#sous {
-  display: none;
-  box-shadow: 0px px 2px #CCC;
-  background-color: white;
-  position: absolute;
-  z-index: 1000;
-}
-
-#sous li {
-  float: none;
-  width: 100%;
-  text-align: left;
-}
-
-#sous li:hover ul{
-  left: auto; /* au survol des li on replace les sous-menus */
-}
-
-#sous a {
-  padding: 10px;
-  border-bottom: none;
-}
-
-#sous a:hover {
-  position:fixed;
-  border-bottom: none;
-  background-color: RGBa(200,200,200,0.1);
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Billetterie</title>
+    <title> Billetterie</title>
     <link href="files/style.css" rel="stylesheet" type="text/css" />
     <script src='files/script.js' async></script>
   </head>
@@ -13,15 +13,14 @@
       <h1>
         <nav>
           <ul id="menu_2">
-            <li><a href="index.html" class="nav-item" data-target="Accueil">Accueil</a></li>
-            <li><a href="#" class="nav-item"  data-target="billeterie">Billetterie</a></li>
+            <li><a href="index.html" class="nav-item is-active" data-target="Accueil">Accueil</a></li>
+            <li><a href="billets.html" class="nav-item"  data-target="billeterie">Billetterie</a></li>
             <li><a href="Actu.html" class="nav-item"  data-target="Actualités">Actualités</a></li>
-            <li><a href="Artistes.html" class="nav-item" data-active-color="red" data-target="Artistes">Artistes</a></li>
-            <li><a class="nav-item" data-active-color="rebeccapurple" data-target="Autres"> Autres</a>
-              <ul id="sous">
+            <li><a href="Artistes.html" class="nav-item" data-target="Artistes">Artistes</a></li>
+            <li><a class="nav-item" data-target="Autres"> Autres</a>
+              <ul class="sous">
                 <li><a href="page_4.html"> Qui sommes-nous ?</a></li>
                 <li><a href="page_3.html">Exemple page billet</a></li>
-                <li><a href="#">JavaScript</a></li>
               </ul>
             </li>
           </ul>
@@ -30,6 +29,10 @@
       </h1>
     </header>
 
+    <div class="user">
+      <img src="files/Icones/user-solid.svg" alt="" class="icone"/>
+    </div>
+    
     <nav id="menu">
       <ul>
         <li class="liste"><a href="#anchor1">Genre1</a></li>
@@ -41,7 +44,7 @@
       <img src="files/Icones/arrow-up-long-solid.svg" alt="" class="icone"/>
     </div>
 
-    <article>
+    <article id="article">
       <section>
         <h2 id="anchor1">Heavy metal</h2>
         <div class="box_1">
@@ -131,7 +134,7 @@
               <div class="lieux"><img class="icone" src="files/Icones/location-dot-solid.svg" alt=""/>Divers lieux, Amérique du nord</div>
               <div class="date"><img class="icone" src="files/Icones/calendar-days-solid.svg" alt=""/> Date - du 22 Févrer au 3 Mars 2022</div>
               <div class="prix"><img class="icone" src="files/Icones/bitcoin-brands.svg" alt=""/> À partir de ... € </div>
-              <div><button class="btn_voir"><img class="icone" src="files/Icones/ticket-solid.svg" alt=""/> Voir</button></div>
+              <div><button class="btn_voir"> <img class="icone" src="files/Icones/ticket-solid.svg" alt=""/> Voir</button></div>
             </p>
           </div>
           <div class="box">
@@ -305,7 +308,7 @@
       </section>
     </article>
 
-    <footer> ||<u>Réseaux sociaux:</u> <img class="icone" src="files/Icones/instagram-brands.svg" alt=""/> @user_name | <img class="icone" src="files/Icones/facebook-f-brands.svg" alt=""/> User Name | <img class="icone" src="files/Icones/twitter-brands.svg" alt=""/>  @User_Name_ | <img class="icone" src="files/Icones/envelope-solid.svg" alt=""/> adresseprofessionele@gmail.com ||
+    <footer> ||<u>Réseaux sociaux:</u> <img class="icone" src="files/Icones/instagram-brands.svg" alt=""/> @user_name | <img class="icone" src="files/Icones/facebook-f-brands.svg" alt=""/> User Name | <img class="icone" src="files/Icones/twitter-brands.svg" alt=""/>  @User_Name_ | <img class="icone" src="files/Icones/envelope-solid.svg" alt=""/> adresseprofessionelle@gmail.com ||
       <br>|| MARCIALIS Jody, LAMBOLEZ Louise, PALAZZETTI-RUBERA Colin | Terminale G3 | Spécialité NSI | Lycée Alphonse Benoît | 2021-2022 ||</br>
     </footer>  
   </body>
